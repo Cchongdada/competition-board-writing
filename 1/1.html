@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0"
           name="viewport">
-    <title>广州华商学院活动</title>
+    <title>作者:数科院 李琯珽</title>
     <script src="../timer1.js"></script>
     <link rel="stylesheet" href="../css/css.css">
     <style>
@@ -87,7 +87,14 @@
             : 10px;
         }
 
-
+        .additional-content p {
+            width: 70%;
+            margin: auto; /* 添加这行，自动计算左右边距以居中显示 */
+            text-align: justify; /* 确保文本水平居中 */
+            text-indent: 2em; /* 首行缩进 */
+            line-height: 50px;
+            letter-spacing: 2px;
+        }
 
         .footer {
             font-size: 26px;
@@ -97,6 +104,10 @@
             font-family: '2312', sans-serif;
         }
 
+        .timer-title {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
 
         button {
             margin-top: 10px;
@@ -104,47 +115,51 @@
         }
 
     </style>
-    <script src="../timer1.js"></script>
 </head>
 <body>
 <div class="header">
     <div class="header-content">
         <div class="logo">
+            <a href="../1.html">
             <img alt="广州华商学院标志"
                  src="../white.png"
                  style="width: 20%;">
+            </a>
         </div>
         <div class="motto">广州华商学院第七届辅导员素质能力大赛实践技能比赛</div>
     </div>
 </div>
 <div class="main">
-    <div class="additional-content" style="text-align: center">
-        <h1>案例分析1</h1>
-        <p>请在2分钟内完成以下问题</p>
-        <p>1231231231231231231231231231</p>
-    </div>
     <div class="timer-container">
         <div class="timer" id="timer1">
-            <div>选手提问</div>
-            <div id="time1">01:00</div>
+            <div class="timer-title">选手提问</div>
+            <div id="time1" style="font-size: 40px;margin-top: 5px;">01:00</div>
             <button onclick="startTimer(1)">启动</button>
             <button onclick="pauseTimer(1)">暂停</button>
             <button onclick="resetTimer(1)">重置</button>
         </div>
         <div class="timer" id="timer2">
-            <div>评委提问</div>
-            <div id="time2">01:00</div>
+            <div class="timer-title">评委提问</div>
+            <div id="time2" style="font-size: 40px;margin-top: 5px;">01:00</div>
             <button onclick="startTimer(2)">启动</button>
             <button onclick="pauseTimer(2)">暂停</button>
             <button onclick="resetTimer(2)">重置</button>
         </div>
         <div class="timer" id="timer3">
-            <div>选手作答</div>
-            <div id="time3">05:00</div>
+            <div class="timer-title">选手作答</div>
+            <div id="time3" style="font-size: 40px;margin-top: 5px;">05:00</div>
             <button onclick="startTimer(3)">启动</button>
             <button onclick="pauseTimer(3)">暂停</button>
             <button onclick="resetTimer(3)">重置</button>
         </div>
+    </div>
+    <div class="additional-content" style="text-align: center">
+        <h1 style="font-size: 40px;">案例分析1</h1>
+        <p style="font-size: 34px;">
+            学生林某，进大学后三个月就向党支部递交了入党申请书，并在第二学期被确立为入党积极分子。该生平常学习努力，
+            获得过奖学金，同学关系也处理的不错，到了大二下学期，还没有加入党组织，而班上有些成绩还不如他的同学，都已经加入了党组织。
+            一天，他到你办公室发泄不满情绪，他说：为什么这么长时间了不发展我进入党组织，而比我成绩差的都发展了，这个严重影响了我入党的积极性，还将影响我今后找工作和升迁道路。<br>
+            </p><p style="font-size: 34px;margin-top: 5px;">作为辅导员，此时该如何作答？</p>
     </div>
 </div>
 
