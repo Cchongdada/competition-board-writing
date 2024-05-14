@@ -52,9 +52,11 @@
         }
 
         .motto {
-            width: 100%;
-            font-size: 26px;
+            width: 30%;
+            font-size: 26px; /* 使用视窗宽度的百分比来定义字体大小 */
             font-family: '2312', sans-serif;
+            white-space: nowrap; /* 防止内容换行 */
+            min-width: 300px; /* 设置一个最小宽度，避免在极小屏幕上内容被挤压 */
         }
 
         .main {

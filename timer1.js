@@ -8,6 +8,14 @@ function displayTime(timerId) {
 }
 
 function startTimer(timerId) {
+    // 检查是否有其他计时器在运行
+    timers.forEach((timer, index) => {
+        if (timer !== null && (index + 1) !== timerId) {
+            pauseTimer(index + 1);
+        }
+    });
+
+    // 启动当前计时器
     if (!timers[timerId - 1]) {
         timers[timerId - 1] = setInterval(() => {
             if (seconds[timerId - 1] > 0) {
@@ -27,6 +35,6 @@ function pauseTimer(timerId) {
 
 function resetTimer(timerId) {
     pauseTimer(timerId);
-    seconds[timerId - 1] = [60, 60, 300][timerId - 1]; // reset to corresponding value
+    seconds[timerId - 1] = [60, 60, 300][timerId - 1]; // 重置为对应的初始值
     displayTime(timerId);
 }
