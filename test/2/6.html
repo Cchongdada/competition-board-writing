@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0"
+          name="viewport">
+    <title>作者:数科院 李琯珽</title>
+    <script src="../timer2.js"></script>
+    <link rel="stylesheet" href="../css/css.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .header, .footer {
+            flex: 0 0 auto;
+        }
+
+        .main {
+            flex: 1 0 auto;
+            width: 100%;
+        }
+
+        .header, .main, .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            background-color: #b40000;
+            color: #ffffff;
+            padding: 20px 10px;
+            font-family: '2312', sans-serif;
+        }
+
+
+        .header-content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .motto {
+            width: 100%;
+            font-size: 26px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #fff;
+            color: #000;
+            padding: 40px 0;
+        }
+
+        .timer-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px; /* 调整计时器和额外内容之间的距离 */
+        }
+
+        .additional-content {
+            margin-bottom: 20px; /* 调整额外内容与计时器之间的距离 */
+        }
+
+        .timer {
+            text-align: center;
+            font-size: 24px;
+            : 10px;
+        }
+
+        .additional-content p {
+            width: 70%;
+            margin: auto; /* 添加这行，自动计算左右边距以居中显示 */
+            text-align: justify; /* 确保文本水平居中 */
+            text-indent: 2em; /* 首行缩进 */
+            line-height: 50px;
+            letter-spacing: 2px;
+        }
+
+        .footer {
+            font-size: 26px;
+            background-color: #b40000;
+            color: #ffffff;
+            padding: 10px 0;
+            font-family: '2312', sans-serif;
+        }
+
+        .timer-title {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-content">
+        <div class="logo">
+            <a href="../2.html">
+                <img alt="广州华商学院标志"
+                     src="../white.png"
+                     style="width: 20%;">
+            </a>
+        </div>
+        <div class="motto">广州华商学院第七届辅导员素质能力大赛实践技能比赛</div>
+    </div>
+</div>
+<div class="main">
+    <div class="timer-container">
+        <div class="timer" id="timer1">
+            <div class="timer-title">谈话时间</div>
+            <div id="time1" style="font-size: 40px;margin-top: 5px;">06:00</div>
+            <button onclick="startTimer(1)">启动</button>
+            <button onclick="pauseTimer(1)">暂停</button>
+            <button onclick="resetTimer(1)">重置</button>
+        </div>
+        <div class="timer" id="timer2">
+            <div class="timer-title">总结时间</div>
+            <div id="time2" style="font-size: 40px;margin-top: 5px;">02:00</div>
+            <button onclick="startTimer(2)">启动</button>
+            <button onclick="pauseTimer(2)">暂停</button>
+            <button onclick="resetTimer(2)">重置</button>
+        </div>
+        <div class="timer" id="timer3">
+            <div class="timer-title">回答时间</div>
+            <div id="time3" style="font-size: 40px;margin-top: 5px;">02:00</div>
+            <button onclick="startTimer(3)">启动</button>
+            <button onclick="pauseTimer(3)">暂停</button>
+            <button onclick="resetTimer(3)">重置</button>
+        </div>
+    </div>
+    <div class="additional-content" style="text-align: center">
+        <h1 style="font-size: 40px;">谈心谈话6</h1>
+        <p style="font-size: 34px;">
+            </p>
+    </div>
+    <audio controls>
+        <source src="audio/6.MP3" type="audio/mpeg">
+    </audio>
+</div>
+
+<div class="footer" >
+    <p style="margin-top: 5px;margin-bottom: 0;">广州·增城</p>
+    <p style="margin-top: 5px;margin-bottom: 10px;">2024年5月15日</p>
+</div>
+</body>
+</html>
